@@ -24,4 +24,13 @@ contract Counter{
         return map1[vals];
     }///or generally use map as it is public
 
+    struct student{
+        uint roll;
+        string name;
+    }
+    mapping(uint=>student) public st;
+    function addstudentdetails(uint index,uint roll_number,string memory name) public {
+        st[index]=student(roll_number,name);
+    }
+
 }
