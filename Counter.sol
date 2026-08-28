@@ -2,7 +2,7 @@
 pragma solidity ^0.8.34;
 contract Counter{
     uint public  a=0;
-    
+    uint b=0;
     
     function changevalue() public {
         a++;
@@ -12,5 +12,16 @@ contract Counter{
         arr.push(_value);
 
     }
+
+    //mapping
+
+    mapping(uint => string) public map1;
+
+    function addmapvalues(uint key , string memory val) public{
+        map1[key]=val;
+    }
+    function checkmapvalues(uint vals) public view returns(string memory){
+        return map1[vals];
+    }///or generally use map as it is public
 
 }
